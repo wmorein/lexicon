@@ -126,9 +126,11 @@ impl ModelFamily {
 
         self.default_reasoning_effort = Some(default_reasoning_level);
         self.shell_type = shell_type;
-        if let Some(base) = base_instructions {
-            self.base_instructions = base;
-        }
+        // Disabled for Lexicon fork - always use local prompts
+        // if let Some(base) = base_instructions {
+        //     self.base_instructions = base;
+        // }
+        let _ = base_instructions; // silence unused variable warning
         self.supports_reasoning_summaries = supports_reasoning_summaries;
         self.support_verbosity = support_verbosity;
         self.default_verbosity = default_verbosity;
@@ -552,6 +554,8 @@ mod tests {
             updated.experimental_supported_tools,
             vec!["alpha".to_string(), "beta".to_string()]
         );
-        assert_eq!(updated.base_instructions, "Remote instructions");
+        // Remote base_instructions override is disabled for Lexicon fork
+        // Local prompts are always used
+        assert_eq!(updated.base_instructions, BASE_INSTRUCTIONS);
     }
 }
