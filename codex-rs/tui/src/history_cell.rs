@@ -890,7 +890,7 @@ pub(crate) fn new_session_info(
             Line::from(vec![
                 "  ".into(),
                 "/init".into(),
-                " - create an AGENTS.md file with instructions for Codex".dim(),
+                " - create an AGENTS.md file with instructions for Lexicon".dim(),
             ]),
             Line::from(vec![
                 "  ".into(),
@@ -900,7 +900,7 @@ pub(crate) fn new_session_info(
             Line::from(vec![
                 "  ".into(),
                 "/approvals".into(),
-                " - choose what Codex can do without approval".dim(),
+                " - choose what Lexicon can do without approval".dim(),
             ]),
             Line::from(vec![
                 "  ".into(),

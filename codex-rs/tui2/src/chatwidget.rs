@@ -3431,12 +3431,11 @@ impl Notification {
 
 const AGENT_NOTIFICATION_PREVIEW_GRAPHEMES: usize = 200;
 
-const EXAMPLE_PROMPTS: [&str; 6] = [
-    "Explain this codebase",
-    "Summarize recent commits",
+const EXAMPLE_PROMPTS: [&str; 5] = [
+    "Explain this project",
     "Implement {feature}",
-    "Find and fix a bug in @filename",
-    "Write tests for @filename",
+    "Find and fix errors in @filename",
+    "Write flashcards to help me remember @filename",
     "Improve documentation in @filename",
 ];
 
