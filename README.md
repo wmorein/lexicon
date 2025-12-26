@@ -30,7 +30,7 @@ Lexicon can access MCP servers. To configure them, refer to the [config docs](./
 
 ### Configuration
 
-Lexicon supports a rich set of configuration options, with preferences stored in `~/.codex/config.toml`. For full configuration options, see [Configuration](./docs/config.md).
+Lexicon supports a rich set of configuration options, with preferences stored in `~/.lexicon/config.toml`. For full configuration options, see [Configuration](./docs/config.md).
 
 ### Execpolicy
 
