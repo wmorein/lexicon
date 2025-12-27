@@ -128,7 +128,7 @@ fn write_embedded_dir(dir: &Dir<'_>, dest: &AbsolutePathBuf) -> Result<(), Syste
                 fs::create_dir_all(subdir_dest.as_path()).map_err(|source| {
                     SystemSkillsError::io("create system skills subdir", source)
                 })?;
-                write_embedded_dir(subdir, dest)?;
+                write_embedded_dir(subdir, &subdir_dest)?;
             }
             include_dir::DirEntry::File(file) => {
                 let path = dest.join(file.path()).map_err(|source| {
